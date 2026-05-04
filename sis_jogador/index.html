@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Pokémon - Aether Foundation</title>
+    <link rel="icon" type="image/png" href="../favicon.png" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Empréstimo</h1>
+        <div class="busca-container">
+            <input type="text" id="pokemonInput" placeholder="Digite o nome ou ID">
+            <button onclick="buscarPokemon()">Buscar</button>
+        </div>
+
+        <div id="resultado" style="display: none;">
+            <h2 id="pokemonName"></h2>
+            <img id="pokemonImage" src="" alt="" style="display: none;">
+    
+            <div id="pontuacaoTotal">
+                <h3>Custo de Empréstimo: <span id="custoFinal">0</span></h3>
+            </div>
+
+            <div id="extra">
+                <div class="field">
+                    <label>Nature:</label>
+                    <select id="natureSelector" onchange="calcularTotal()">
+                        <option value="aleatoria">Aguardando Busca...</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Habilidade:</label>
+                    <select id="abilitySelector" onchange="calcularTotal()">
+                        <option value="aleatoria">Aguardando Busca...</option>
+                    </select>
+                </div>
+            </div>
+
+            <table id="tabelaStatus">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Qualidade</th>
+                    </tr>
+                </thead>
+                <tbody id="statusBody"></tbody>
+            </table>
+
+            <button onclick="baixarRelatorio()" class="btn-download">
+                Gerar Comprovante de Empréstimo (.txt)
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -26,6 +26,13 @@ async function atualizarPreview() {
                     document.getElementById('carta-sprite').src = novaUrl
                     document.getElementById('carta-sprite').style.display = 'block'
                 }
+
+                document.getElementById('stat-hp').textContent = data.stats[0].base_stat
+                document.getElementById('stat-atk').textContent = data.stats[1].base_stat
+                document.getElementById('stat-def').textContent = data.stats[2].base_stat
+                document.getElementById('stat-spa').textContent = data.stats[3].base_stat
+                document.getElementById('stat-spd').textContent = data.stats[4].base_stat
+                document.getElementById('stat-spe').textContent = data.stats[5].base_stat
             }
         } catch (error) {
             console.log("Pokémon ainda não encontrado...")

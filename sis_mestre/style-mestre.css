@@ -91,15 +91,31 @@ button:hover { background: #b7950b; }
     justify-content: flex-start;
     padding-left: 8px;
     overflow: hidden;
+    font-size: 10px;
+    letter-spacing: 2.5px;
 }
 
 #carta-sprite { position: absolute; top: 55px; left: 45px; width: 280px; height: 280px; object-fit: contain; }
-#carta-nome { top: 85px; left: 540px; }
-#carta-nature { top: 188px; left: 540px; }
-#carta-ability { top: 290px; left: 540px; }
+#carta-nome { top: 90px; left: 450px; }
+#carta-nature { top: 188px; left: 450px; }
+#carta-ability { top: 290px; left: 450px; }
 
-.move-box { width: 195px; height: 35px; display: flex; align-items: center; }
-#move1 { top: 400px; left: 150px; }
-#move2 { top: 490px; left: 150px; }
-#move3 { top: 400px; left: 500px; }
-#move4 { top: 490px; left: 500px; }
+.move-box { width: 180px; height: 35px; display: flex; align-items: center; }
+#move1 { top: 400px; left: 80px; }
+#move2 { top: 400px; left: 240px; }
+#move3 { top: 400px; left: 430px; }
+#move4 { top: 400px; left: 590px; }
+
+.stat-box {
+    width: 40px;
+    height: 25px;
+    justify-content: center;
+    font-size: 11px;
+}
+
+#stat-hp { top: 508px; left: 85px; }
+#stat-atk { top: 508px; left: 200px; }
+#stat-def { top: 508px; left: 315px; }
+#stat-spa { top: 508px; left: 440px; }
+#stat-spd { top: 508px; left: 555px; }
+#stat-spe { top: 508px; left: 670px; }

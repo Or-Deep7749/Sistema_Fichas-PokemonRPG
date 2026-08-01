@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body {
+    background-color: #1a162b; 
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    color: #ecf0f1;
+}
+
+.admin-container {
+    width: 100%;
+    max-width: 1200px;
+    background: #231f38;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border-top: 5px solid #f1c40f;
+}
+
+h1 { 
+    color: #f1c40f; 
+    margin-bottom: 5px; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.editor-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group { display: flex; flex-direction: column; gap: 5px; }
+.input-group label { color: #dcdde1; font-weight: 600; }
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.moves-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+input {
+    padding: 10px;
+    border: 1px solid #4834d4;
+    border-radius: 5px;
+    font-family: inherit;
+    background-color: #130f40;
+    color: #ffffff;
+}
+
+input:focus {
+    outline: none;
+    border-color: #f1c40f;
+}
+
+button {
+    background: linear-gradient(135deg, #8e44ad, #6c5ce7); 
+    color: #ffffff;
+    border: 1px solid #f1c40f;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button:hover { 
+    background: linear-gradient(135deg, #9b59b6, #a29bfe);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+}
+
+#areaCarta {
+    width: 800px;
+    height: 447px;
+    background-image: url('BFID.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    zoom: 0.8;
+    overflow: hidden;
+}
+
+.dado-carta {
+    position: absolute;
+    font-family: 'Orbitron', sans-serif;
+    color: #f5f5dc;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.move-box {
+    width: 185px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 8px;
+    overflow: hidden;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+}
+
+#carta-sprite { position: absolute; top: 55px; left: 45px; width: 280px; height: 280px; object-fit: contain; }
+#carta-nome { top: 57px; left: 490px; }
+#carta-nature { top: 102px; left: 490px; }
+#carta-ability { top: 147px; left: 490px; }
+
+.move-box { width: 180px; height: 35px; display: flex; align-items: center; }
+#move1 { top: 205px; left: 390px; }
+#move2 { top: 205px; left: 575px; }
+#move3 { top: 260px; left: 390px; }
+#move4 { top: 260px; left: 575px; }
+
+.stat-box {
+    color: #0c3340;
+    width: 40px;
+    height: 25px;
+    justify-content: center;
+    font-size: 11px;
+}
+
+#stat-hp { top: 358px; left: 75px; }
+#stat-atk { top: 358px; left: 170px; }
+#stat-def { top: 358px; left: 265px; }
+#stat-spa { top: 358px; left: 495px; }
+#stat-spd { top: 358px; left: 590px; }
+#stat-spe { top: 358px; left: 685px; }

@@ -97,8 +97,8 @@ button:hover { background: #b7950b; }
 
 #carta-sprite { position: absolute; top: 55px; left: 45px; width: 280px; height: 280px; object-fit: contain; }
 #carta-nome { top: 90px; left: 450px; }
-#carta-nature { top: 188px; left: 450px; }
-#carta-ability { top: 290px; left: 450px; }
+#carta-nature { top: 192px; left: 450px; }
+#carta-ability { top: 295px; left: 450px; }
 
 .move-box { width: 180px; height: 35px; display: flex; align-items: center; }
 #move1 { top: 400px; left: 80px; }

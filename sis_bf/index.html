@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Administration - Card Creator</title>
+    <link rel="stylesheet" href="style-bf.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <header>
+            <h1>Emissor de Pokémon ID</h1>
+        </header>
+
+        <main class="editor-layout">
+            <section class="control-panel">
+                <div class="input-group">
+                    <label>Nome do Pokémon:</label>
+                    <input type="text" id="inputNome" placeholder="Ex: PIKACHU" oninput="atualizarPreview()">
+                </div>
+
+                <div class="input-group">
+                    <label>Sprite (URL ou Local):</label>
+                    <input type="text" id="inputSprite" placeholder="Cole a URL da imagem" oninput="atualizarPreview()">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Nature:</label>
+                        <input type="text" id="inputNature" placeholder="Ex: ADAMANT" oninput="atualizarPreview()">
+                    </div>
+                    <div class="input-group">
+                        <label>Ability:</label>
+                        <input type="text" id="inputAbility" placeholder="Ex: STATIC" oninput="atualizarPreview()">
+                    </div>
+                </div>
+
+                <div class="moves-grid">
+                    <label style="grid-column: span 2;">Ataques (Moves):</label>
+                    <input type="text" id="inputM1" placeholder="Move 1" oninput="atualizarPreview()">
+                    <input type="text" id="inputM2" placeholder="Move 2" oninput="atualizarPreview()">
+                    <input type="text" id="inputM3" placeholder="Move 3" oninput="atualizarPreview()">
+                    <input type="text" id="inputM4" placeholder="Move 4" oninput="atualizarPreview()">
+                </div>
+
+                <button id="btnDownload" onclick="gerarImagem()">Finalizar e Baixar Cartão</button>
+            </section>
+
+            <section class="preview-panel">
+                <div id="areaCarta">
+                    <img id="carta-sprite" src="" alt="">
+                    <div id="carta-nome" class="dado-carta"></div>
+                    <div id="carta-nature" class="dado-carta"></div>
+                    <div id="carta-ability" class="dado-carta"></div>
+                    
+                    <div id="move1" class="dado-carta move-box"></div>
+                    <div id="move2" class="dado-carta move-box"></div>
+                    <div id="move3" class="dado-carta move-box"></div>
+                    <div id="move4" class="dado-carta move-box"></div>
+
+                    <div id="stat-hp" class="dado-carta stat-box"></div>
+                    <div id="stat-atk" class="dado-carta stat-box"></div>
+                    <div id="stat-def" class="dado-carta stat-box"></div>
+                    <div id="stat-spa" class="dado-carta stat-box"></div>
+                    <div id="stat-spd" class="dado-carta stat-box"></div>
+                    <div id="stat-spe" class="dado-carta stat-box"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script-bf.js"></script>
+</body>
+</html>

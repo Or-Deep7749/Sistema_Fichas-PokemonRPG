@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Cálculo de Status</h1>
+        <div>
+            <input type="text" id="pokeBusca" placeholder="Nome ou ID">
+            <input type="number" id="pokeLevel" placeholder="Nivel" value="10" min="10" max="100">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+        <p id="errorMsg" style="display: none;color: red;">Error</p>
+        <div class="pokeCard" id="pokeCard">
+            <img src="" id="pokeSprite">
+            <h2 class="pokeNome" id="pokeNome"></h2>
+            <div class="pokeTipo" id="pokeTipos"></div>
+            <div class="status-grid">
+                <div class="status-base">
+                    <h3>Status Base</h3>
+                    <ul>
+                        <li><span>HP:</span><strong id="base-hp">-</strong></li>
+                        <li><span>Atk:</span><strong id="base-atk">-</strong></li>
+                        <li><span>Def:</span><strong id="base-def">-</strong></li>
+                        <li><span>Sp.A:</span><strong id="base-spa">-</strong></li>
+                        <li><span>Sp.D:</span><strong id="base-spd">-</strong></li>
+                        <li><span>Spe:</span><strong id="base-spe">-</strong></li>
+                    </ul>
+                </div>
+                <div class="status-rpg">
+                    <h3>Status RPG</h3>
+                    <ul>
+                        <li><span>HP:</span><strong id="rpg-hp">-</strong></li>
+                        <li><span>Atk:</span><strong id="rpg-atk">-</strong></li>
+                        <li><span>Def:</span><strong id="rpg-def">-</strong></li>
+                        <li><span>Sp.A:</span><strong id="rpg-spa">-</strong></li>
+                        <li><span>Sp.D:</span><strong id="rpg-spd">-</strong></li>
+                        <li><span>Spe:</span><strong id="rpg-spe">-</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

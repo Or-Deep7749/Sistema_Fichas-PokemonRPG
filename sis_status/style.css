@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a24;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.rpg-container {
+    background: #252636;
+    border: 3px solid #e63946;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.rpg-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #f1faee;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.search-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #457b9d;
+    background-color: #1d3557;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box button {
+    padding: 10px 16px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background-color: #c1121f;
+}
+
+.pokemon-card {
+    background: #1d1e2c;
+    border-radius: 8px;
+    padding: 16px;
+    display: none; /* Escondido até buscar */
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #3d3e56;
+}
+
+.pokemon-card img {
+    width: 120px;
+    height: 120px;
+}
+
+.pokemon-name {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    margin-top: 8px;
+    color: #ffb703;
+}
+
+.pokemon-types {
+    display: flex;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.type-badge {
+    background: #457b9d;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.error-message {
+    color: #e63946;
+    margin-top: 10px;
+    display: none;
+}
+
+.status-grid {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.status-box {
+    flex: 1;
+    min-width: 180px;
+    background-color: #2b2b36;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.status-box h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    padding-bottom: 4px;
+}
+
+.status-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.status-box li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
